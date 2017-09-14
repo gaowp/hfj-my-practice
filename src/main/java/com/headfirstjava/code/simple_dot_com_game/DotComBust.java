@@ -28,7 +28,8 @@ public class DotComBust {
 		System.out.println("Pets.com, eToys.com, Go2.com");
 		System.out.println("Try to sink them all in the fewest number of guesses");
 
-		for (DotCom dotComToSet : dotComsList) {// 对list中的每个DotCom重复一次
+		// 对list中的每个DotCom重复一次
+		for (DotCom dotComToSet : dotComsList) {
 			ArrayList<String> newLocation = helper.placeDotCom(3);// 要求DotCom的位置
 			dotComToSet.setLocationCells(newLocation);// 调用DotCom的setter方法来指派刚取得的位置
 		}
@@ -39,7 +40,7 @@ public class DotComBust {
 			String userGuess = helper.getUserInput("Enter a guess");// 取得玩家输入
 			checkUserGuess(userGuess);// 调用checkUserGuess方法
 		}
-		finishGame();
+		finishGame();//调用finishGame方法
 	}
 
 	private void checkUserGuess(String userGuess) {
@@ -74,7 +75,7 @@ public class DotComBust {
 	
 	public static void main(String[] args) {
 		DotComBust game = new DotComBust();//创建游戏对象
-		game.setUpGame();//要求游戏启动游戏的主要循环
-		game.startPlaying();//要求游戏对象启动
+		game.setUpGame();//要求游戏对象启动
+		game.startPlaying();//要求游戏启动游戏的主要循环
 	}
 }
